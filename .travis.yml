@@ -1,9 +1,10 @@
 language: node_js
 node_js:
  - "10"
-script:
- - npm run deploy
 install:
  - npm install -g firebase-tools
+ - npm i
+script:
+ - npm run build
 after_success:
- - firebase deploy - project anim-trader - token $FIREBASE_TOKEN.
+ - firebase deploy --project=anim-trader --token=${FIREBASE_TOKEN}
