@@ -8,6 +8,7 @@ install:
  - npm install -g firebase-tools
  - npm i
 script:
+ - firebase use anim-trader
  - npm run build
 after_success:
  - firebase deploy --token $FIREBASE_TOKEN
