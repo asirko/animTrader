@@ -29,7 +29,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/lottie-web/build/player/lottie.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { CatalogRoutingModule } from './catalog-routing.module';
+import { CatalogComponent } from './catalog.component';
+import { MiniatureComponent } from './miniature/miniature.component';
+import { DetailComponent } from './detail/detail.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     CatalogRoutingModule
   ],
-  declarations: []
+  declarations: [CatalogComponent, MiniatureComponent, DetailComponent]
 })
 export class CatalogModule { }
