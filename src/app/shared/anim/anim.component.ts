@@ -15,8 +15,6 @@ export class AnimComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log(this.jsonPath === 'https://firebasestorage.googleapis.com/v0/b/anim-trader.appspot.com/o/animweb_Like_01.json?alt=media&token=7948b4a1-c8ae-47d1-beb5-673cefeddba3', this.jsonPath);
-
     const options = {
       container: this.elementRef.nativeElement,
       renderer: 'svg',
@@ -27,8 +25,8 @@ export class AnimComponent implements OnInit {
     };
 
     const anim: any = lottie.loadAnimation(options);
-    anim.addEventListener('DOMLoaded', val => {
-      console.log('anim loaded', val);
+    anim.addEventListener('DOMLoaded', () => {
+      console.log('anim loaded');
     });
   }
 

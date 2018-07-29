@@ -1,3 +1,12 @@
-<div *ngFor="let anim of anims$ | async">
-  <at-miniature [catalogItem]="anim"></at-miniature>
+
+<div class="anims">
+  <at-miniature *ngFor="let anim of anims$ | async" [catalogItem]="anim"></at-miniature>
+  <div class="fake-item"></div>
+  <div class="fake-item"></div>
+  <div class="fake-item"></div>
+  <div class="fake-item"></div>
+  <div class="fake-item"></div>
+  <div class="fake-item"></div>
+  <div class="fake-item"></div>
+  <div class="fake-item"></div>
 </div>

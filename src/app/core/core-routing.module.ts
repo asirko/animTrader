@@ -16,6 +16,10 @@ const routes: Routes = [
         path: 'catalog',
         loadChildren: 'src/app/features/catalog/catalog.module#CatalogModule',
       },
+      {
+        path: 'user',
+        loadChildren: 'src/app/features/user/user.module#UserModule',
+      },
     ],
   }
 ];

@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  max-width: 1280px;
+}
+
+.anims {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  margin: -10px;
+}
+
+at-miniature {
+  width: 120px;
+  margin: 10px;
+}
+
+.fake-item {
+  height: 0;
+  width: 120px;
+  margin: 0 10px;
+}
