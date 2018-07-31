@@ -1,8 +1,10 @@
-<form [formGroup]="newAnimForm">
-  <div>
-    <input type="text" formControlName="name">
+<form [formGroup]="newAnimForm" class="form">
+  <div class="form-field">
+    <label for="name">Nom de l'animation</label>
+    <input id="name" type="text" formControlName="name">
   </div>
-  <div>
+  <div class="form-field">
+    <label for="name">Fichier bodyMovin d'AE</label>
     <input type="file" formControlName="file" #inputFile>
   </div>
 

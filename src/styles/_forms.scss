@@ -1,0 +1,19 @@
+$form-spacing: 15px;
+
+.form {
+  display: block;
+  margin: 0 -$form-spacing;
+
+  button {
+
+  }
+}
+
+.form-field {
+  margin: $form-spacing;
+
+  label,
+  input {
+    display: block;
+  }
+}
