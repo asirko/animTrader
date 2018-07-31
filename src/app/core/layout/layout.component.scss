@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  background-color: #278be3;
+  color: #fff;
+
+  a {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+
+    &.active {
+      background-color: rgba(#fff, .3);
+    }
+  }
+}
+
+main {
+  padding: 20px;
+}

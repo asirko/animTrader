@@ -1,6 +1,8 @@
 <nav>
-  <a [routerLink]="'/catalog'">Catalogue</a>
-  <a [routerLink]="'/user'">Mon profil</a>
+  <a [routerLink]="'/catalog'" routerLinkActive="active">Catalogue</a>
+  <a [routerLink]="'/user'" routerLinkActive="active">Mon profil</a>
 </nav>
 
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+</main>
