@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CatalogService } from './catalog.service';
+import { AnimService } from './anim.service';
 import { Observable } from 'rxjs';
 import { CatalogItem } from './catalog-item';
 
@@ -12,7 +12,7 @@ export class CatalogComponent implements OnInit {
 
   anims$: Observable<CatalogItem[]>;
 
-  constructor(private catalogService: CatalogService) { }
+  constructor(private catalogService: AnimService) { }
 
   ngOnInit() {
     this.anims$ = this.catalogService.anims$;

@@ -1,4 +1,12 @@
 <form [formGroup]="newAnimForm">
-  <input type="text" formControlName="name">
-  <input type="file" formControlName="file">
+  <div>
+    <input type="text" formControlName="name">
+  </div>
+  <div>
+    <input type="file" formControlName="file" #inputFile>
+  </div>
+
+  <div class="action">
+    <button type="button" (click)="validate(inputFile)">Ajouter</button>
+  </div>
 </form>
