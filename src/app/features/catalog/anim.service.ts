@@ -4,19 +4,27 @@ import { Observable } from 'rxjs';
 import { CatalogItem } from './catalog-item';
 import { fromPromise } from 'rxjs/internal-compatibility';
 import { genGuid } from '../../shared/utils/guid-utils';
-import { first, map, mergeMap } from 'rxjs/operators';
+import { first, map, mergeMap, switchMap } from 'rxjs/operators';
 import { AngularFireStorage } from 'angularfire2/storage';
 import { Reference } from 'angularfire2/storage/interfaces';
 import { AuthService } from '../../core/auth.service';
+
+const ANIM_COLLECTION = 'anims';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnimService {
 
-  private _animsRef = this.db.collection<CatalogItem>('anims');
+  private _animsRef = this.db.collection<CatalogItem>(ANIM_COLLECTION);
 
   readonly anims$: Observable<CatalogItem[]> = this._animsRef.valueChanges();
+  readonly listForUser$ = this.authService.user$.pipe(
+    first(),
+    map(u => u.uid),
+    map(uid => this.db.collection<CatalogItem>(ANIM_COLLECTION, ref => ref.where('authorUid', '==', uid))),
+    switchMap(collection => collection.valueChanges()),
+  );
 
   constructor(
     private db: AngularFirestore,

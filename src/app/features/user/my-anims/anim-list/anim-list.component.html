@@ -1,0 +1,7 @@
+<div class="controls">
+  <button routerLink="new-anim">Ajouter une animation</button>
+</div>
+
+<div class="anims">
+  <div class="anim" *ngFor="let anim of list$ | async">{{ anim | json }}</div>
+</div>
