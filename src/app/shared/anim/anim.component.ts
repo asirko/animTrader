@@ -26,7 +26,7 @@ export class AnimComponent implements OnInit {
 
     const anim: any = lottie.loadAnimation(options);
     anim.addEventListener('DOMLoaded', () => {
-      console.log('anim loaded');
+      // things to do once loaded
     });
   }
 

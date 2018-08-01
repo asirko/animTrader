@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 
 import { UserRoutingModule } from './user-routing.module';
 import { SharedModule } from '../../shared/shared.module';
-import { UserHomeComponent } from './user-home/user-home.component';
+import { MyAnimsComponent } from './my-anims/my-anims.component';
 
 @NgModule({
   imports: [
     SharedModule,
     UserRoutingModule
   ],
-  declarations: [UserHomeComponent]
+  declarations: [
+    MyAnimsComponent
+  ]
 })
 export class UserModule { }

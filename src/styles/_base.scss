@@ -1,0 +1,11 @@
+@import "shared/variables";
+
+button {
+  padding: 10px 20px;
+  border: 1px solid $color-main;
+  border-radius: $border-radius-main;
+  color: #fff;
+  background-color: $color-main;
+  cursor: pointer;
+  outline: none;
+}

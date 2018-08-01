@@ -1,0 +1,10 @@
+.method {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px 0;
+}
+
+.method-provider {
+  display: flex;
+  flex-direction: column;
+}

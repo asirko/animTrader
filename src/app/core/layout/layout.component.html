@@ -1,6 +1,9 @@
 <nav>
-  <a [routerLink]="'/catalog'" routerLinkActive="active">Catalogue</a>
-  <a [routerLink]="'/user'" routerLinkActive="active">Mon profil</a>
+  <a routerLink="/catalog" routerLinkActive="active">Catalogue</a>
+  <a routerLink="/user/my-anims" routerLinkActive="active" *ngIf="user$ | async">Mes animations</a>
+
+  <a routerLink="/login" *ngIf="!(user$ | async)">Se connecter</a>
+  <a (click)="logOut()" *ngIf="user$ | async">Se deconnecter</a>
 </nav>
 
 <main>

@@ -6,10 +6,10 @@ import { AnimService } from '../../catalog/anim.service';
 
 @Component({
   selector: 'at-user-home',
-  templateUrl: './user-home.component.html',
-  styleUrls: ['./user-home.component.scss']
+  templateUrl: './my-anims.component.html',
+  styleUrls: ['./my-anims.component.scss']
 })
-export class UserHomeComponent implements OnInit {
+export class MyAnimsComponent implements OnInit {
 
   newAnimForm: FormGroup;
 

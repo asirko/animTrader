@@ -10,9 +10,14 @@ nav {
     color: #fff;
     text-decoration: none;
     outline: none;
+    cursor: pointer;
 
     &.active {
       background-color: rgba(#fff, .3);
+    }
+
+    &:last-child {
+      margin-left: auto;
     }
   }
 }

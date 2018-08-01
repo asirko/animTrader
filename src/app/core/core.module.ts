@@ -9,6 +9,7 @@ import { environment } from '../../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
   ],
   declarations: [
     LayoutComponent,
+    LoginComponent,
   ]
 })
 export class CoreModule { }
