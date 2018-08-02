@@ -1,6 +1,8 @@
+@import "variables";
+
 nav {
   display: flex;
-  background-color: #278be3; // todo utiliser la couleur en variable
+  background-color: $color-main;
   color: #fff;
 
   a {

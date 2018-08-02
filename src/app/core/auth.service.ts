@@ -18,7 +18,8 @@ export class AuthService {
   logIn(): void {
     const gProvider = new auth.GoogleAuthProvider();
     this.afAuth.auth.signInWithPopup(gProvider)
-      .then(() => this.router.navigate(['/user', 'my-anims']));
+      .then(() => this.router.navigate(['/user', 'my-anims']))
+      .catch(e => console.error('Impossible de se connecter', e));
   }
 
   logOut(): void {
