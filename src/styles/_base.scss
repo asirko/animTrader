@@ -1,10 +1,10 @@
 @import "shared/variables";
 
 button {
-  padding: 10px 20px;
+  padding: $spacing-secondary $spacing-main;
   border: 1px solid $color-main;
   border-radius: $border-radius-main;
-  color: #fff;
+  color: $color-grey-lightX;
   background-color: $color-main;
   cursor: pointer;
   outline: none;

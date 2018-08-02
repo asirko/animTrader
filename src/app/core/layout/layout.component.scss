@@ -3,19 +3,20 @@
 nav {
   display: flex;
   background-color: $color-main;
-  color: #fff;
+  color: $color-grey-lightX;
+  box-shadow: 1px 1px 2px 1px $color-grey;
 
   a {
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    color: #fff;
+    padding: $spacing-secondary;
+    margin: $spacing-secondary;
+    border-radius: $border-radius-main;
+    color: $color-grey-lightX;
     text-decoration: none;
     outline: none;
     cursor: pointer;
 
     &.active {
-      background-color: rgba(#fff, .3);
+      background-color: rgba($color-grey-lightX, .3);
     }
 
     &:last-child {
@@ -25,5 +26,5 @@ nav {
 }
 
 main {
-  padding: 20px;
+  padding: $spacing-main;
 }
