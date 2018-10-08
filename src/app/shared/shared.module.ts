@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AnimComponent } from './anim/anim.component';
+import { AnimComponent } from './components/anim/anim.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MiniatureComponent} from './components/miniature/miniature.component';
 
 @NgModule({
   imports: [
@@ -12,9 +13,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ReactiveFormsModule,
     AnimComponent,
+    MiniatureComponent,
   ],
   declarations: [
     AnimComponent,
+    MiniatureComponent,
   ]
 })
 export class SharedModule { }

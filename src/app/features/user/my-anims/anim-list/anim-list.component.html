@@ -2,6 +2,14 @@
   <button routerLink="new-anim">Ajouter une animation</button>
 </div>
 
-<div class="anims">
-  <div class="anim" *ngFor="let anim of list$ | async">{{ anim | json }}</div>
+<div class="mz-grid">
+  <at-miniature *ngFor="let anim of list$ | async" [catalogItem]="anim"></at-miniature>
+  <div class="mz-grid-empty"></div>
+  <div class="mz-grid-empty"></div>
+  <div class="mz-grid-empty"></div>
+  <div class="mz-grid-empty"></div>
+  <div class="mz-grid-empty"></div>
+  <div class="mz-grid-empty"></div>
+  <div class="mz-grid-empty"></div>
+  <div class="mz-grid-empty"></div>
 </div>

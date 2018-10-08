@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CatalogItem } from '../catalog-item';
+import { CatalogItem } from '../../../features/catalog/catalog-item';
 
 @Component({
   selector: 'at-miniature',

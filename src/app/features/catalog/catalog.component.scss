@@ -4,21 +4,3 @@
   display: block;
   max-width: 1280px;
 }
-
-.anims {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: -$spacing-secondary;
-}
-
-at-miniature {
-  width: 120px;
-  margin: $spacing-secondary;
-}
-
-.fake-item {
-  height: 0;
-  width: 120px;
-  margin: 0 $spacing-secondary;
-}
