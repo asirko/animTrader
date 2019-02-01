@@ -1,0 +1,8 @@
+
+<div class="options">
+  <div class="sliders" [style.top.%]="startTopPercent" [style.bottom.%]="endBottomPercent">
+    <div class="start-range" (mousedown)="moveStart($event)" (touchstart)="moveStart($event)"></div>
+    <div class="end-range" (mousedown)="moveEnd($event)" (touchstart)="moveEnd($event)"></div>
+  </div>
+  <div class="option" *ngFor="let option of options">{{ option.label }}&nbsp;</div>
+</div>

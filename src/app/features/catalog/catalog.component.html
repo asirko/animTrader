@@ -1,6 +1,6 @@
 
 <div class="mz-grid">
-  <at-miniature *ngFor="let anim of anims$ | async" [catalogItem]="anim"></at-miniature>
+  <at-miniature *ngFor="let anim of anims$ | async" [catalogItem]="anim" #miniature (click)="openDetail($event, miniature, anim.id)"></at-miniature>
   <div class="mz-grid-empty"></div>
   <div class="mz-grid-empty"></div>
   <div class="mz-grid-empty"></div>
@@ -10,3 +10,5 @@
   <div class="mz-grid-empty"></div>
   <div class="mz-grid-empty"></div>
 </div>
+
+<router-outlet></router-outlet>

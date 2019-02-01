@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit } from '@angular/core';
 import { CatalogItem } from '../../../features/catalog/catalog-item';
 
 @Component({
@@ -6,13 +6,23 @@ import { CatalogItem } from '../../../features/catalog/catalog-item';
   templateUrl: './miniature.component.html',
   styleUrls: ['./miniature.component.scss']
 })
-export class MiniatureComponent implements OnInit {
+export class MiniatureComponent implements AfterViewInit {
 
   @Input() catalogItem: CatalogItem;
+  relativeBoundingRect: { left: number, top: number, width: number, height: number};
 
-  constructor() { }
+  constructor(
+    private elementRef: ElementRef,
+  ) { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    const el = <HTMLElement>this.elementRef.nativeElement;
+      this.relativeBoundingRect = {
+      width: el.offsetWidth,
+      height: el.offsetHeight,
+      top: el.offsetTop,
+      left: el.offsetLeft,
+    };
   }
 
 }

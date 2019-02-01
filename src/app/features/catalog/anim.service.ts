@@ -18,7 +18,9 @@ export class AnimService {
 
   private _animsRef = this.db.collection<CatalogItem>(ANIM_COLLECTION);
 
-  readonly anims$: Observable<CatalogItem[]> = this._animsRef.valueChanges();
+  readonly anims$: Observable<CatalogItem[]> = this._animsRef.snapshotChanges().pipe(
+    map(actions => actions.map(a => ({id: a.payload.doc.id, ...a.payload.doc.data() as CatalogItem})))
+  );
   readonly listForUser$ = this.authService.user$.pipe(
     first(),
     map(u => u.uid),

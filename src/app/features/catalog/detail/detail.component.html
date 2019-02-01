@@ -1,3 +1,12 @@
-<p>
-  detail works!
-</p>
+<main>
+  <at-anim #animPlayer [jsonPath]="'/assets/test.json'"></at-anim>
+
+  <at-vertical-extremum-slider #slider [options]="animPlayer.markers$ | async"></at-vertical-extremum-slider>
+
+  <button (click)="animPlayer.play(slider.value[0], slider.value[1])">play</button>
+</main>
+
+
+<div class="controls">
+  <button (click)="setInitialState(true)">fermer</button>
+</div>

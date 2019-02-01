@@ -5,12 +5,21 @@ import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
   {
+    path: 'test',
+    component: DetailComponent,
+    data: { isTest: true }
+  }, {
     path: '',
     component: CatalogComponent,
-  },
-  {
-    path: ':id',
-    component: DetailComponent,
+    children: [
+      {
+        path: '',
+        component: null,
+      }, {
+        path: ':id',
+        component: DetailComponent,
+      },
+    ]
   },
 ];
 

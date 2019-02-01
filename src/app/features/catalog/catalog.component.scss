@@ -1,6 +1,18 @@
 @import "variables";
 
 :host {
+  position: relative;
   display: block;
   max-width: 1280px;
 }
+
+at-miniature {
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    border: 1px solid #000;
+    border-radius: 20px;
+  }
+}
+
